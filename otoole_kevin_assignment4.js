@@ -36,6 +36,20 @@ var myLibrary = function() {
 		}
 		return (results.join (" " + sep2 + " " ));
 	}
+	
+	/*var replSep = function(string,sep1,sep2) {
+		var results = string.replace(sep1,sep2);
+		for (var i=0; i=results.length; i++) {
+			results.push(results[i]);
+		}
+		return results;
+	}  //play with this some more*/
+	
+	// FORMAT A NUMBER TO USE A SPECIFIC AMOUNT OF DECIMAL PLACES.
+	var decimal = function(val) {
+		var decNum = val.toFixed(2);
+		return decNum;
+	}
 
 	// CHECK NUMERIC FUNCTION
 	var checkNumeric = function(val) {
@@ -45,7 +59,6 @@ var myLibrary = function() {
 		} else { 
 			return true;
 		}	
-	
 	}
 	
 	
@@ -84,7 +97,9 @@ var myLibrary = function() {
 		"areYouLee": areYouLee,
 		"checkString": checkString,
 		"checkUrl": checkUrl,
-		"sepReplace": sepReplace
+		"sepReplace": sepReplace,
+		//"replSep": replSep,
+		"decimal": decimal
 	}
 
 
@@ -97,3 +112,5 @@ console.log("Is this Lee? " + newLib.areYouLee("Lee"));
 console.log("The dash is in position " + newLib.checkString("123-456"));
 console.log("Is this a URL? " + newLib.checkUrl("http://www.kevinotoole.com"));
 console.log("The new string is: " + newLib.sepReplace("Jeanine,Kevin,James,Kelly", ",", "/"));
+//console.log(newLib.replSep("jenanine,kevin,james,kelly", ",", " / "));
+console.log("This coffee cost $" + newLib.decimal(5.5));
