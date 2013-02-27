@@ -25,7 +25,17 @@ var myLibrary = function() {
 		}
 	}
 
-
+	/*GIVEN A STRING THAT IS A LIST OF THINGS SEPARATED BY A GIVEN STRING,
+	AS WELL AS ANOTHER STRING SEPARATOR, RETURN A STRING WITH THE FIRST
+	SEPARATOR CHANGED TO THE SECOND.*/
+	var sepReplace = function(string,sep1,sep2) {
+		var stringArray = string.split(sep1),
+			results = [ ];
+		for (var i=0; i < stringArray.length; i++) {
+			results.push(stringArray[i]);
+		}
+		return (results.join (" " + sep2 + " " ));
+	}
 
 	// CHECK NUMERIC FUNCTION
 	var checkNumeric = function(val) {
@@ -74,7 +84,7 @@ var myLibrary = function() {
 		"areYouLee": areYouLee,
 		"checkString": checkString,
 		"checkUrl": checkUrl,
-
+		"sepReplace": sepReplace
 	}
 
 
@@ -86,3 +96,4 @@ console.log("Is this a number? " + newLib.checkNumeric(156));
 console.log("Is this Lee? " + newLib.areYouLee("Lee"));
 console.log("The dash is in position " + newLib.checkString("123-456"));
 console.log("Is this a URL? " + newLib.checkUrl("http://www.kevinotoole.com"));
+console.log("The new string is: " + newLib.sepReplace("Jeanine,Kevin,James,Kelly", ",", "/"));
