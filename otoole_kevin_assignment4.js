@@ -50,6 +50,12 @@ var myLibrary = function() {
 		var decNum = val.toFixed(2);
 		return decNum;
 	}
+	
+	// GIVEN THE STRING VERSION OF A NUMBER, RETURN THE VALUE AS AN ACTUAL NUMBER
+	var strNum = function(val) {
+		var number = Number(val);
+		return number;
+	}
 
 	// CHECK NUMERIC FUNCTION
 	var checkNumeric = function(val) {
@@ -99,7 +105,8 @@ var myLibrary = function() {
 		"checkUrl": checkUrl,
 		"sepReplace": sepReplace,
 		//"replSep": replSep,
-		"decimal": decimal
+		"decimal": decimal,
+		"strNum": strNum
 	}
 
 
@@ -114,3 +121,4 @@ console.log("Is this a URL? " + newLib.checkUrl("http://www.kevinotoole.com"));
 console.log("The new string is: " + newLib.sepReplace("Jeanine,Kevin,James,Kelly", ",", "/"));
 //console.log(newLib.replSep("jenanine,kevin,james,kelly", ",", " / "));
 console.log("This coffee cost $" + newLib.decimal(5.5));
+console.log("The number is: " + newLib.strNum("42"));
