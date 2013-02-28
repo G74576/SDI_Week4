@@ -1,7 +1,7 @@
 //alert("JavaScript works!");
 
 // Kevin M. O'Toole
-// SDI 1301
+// SDI 1302
 // Project 4
 // Function Library
 
@@ -19,7 +19,7 @@ var myLibrary = function() {
 			if (url === "https:") {
 				return true;
 			} else {
-			return false;
+				return false;
 			}
 		}
 	}
@@ -68,7 +68,7 @@ var myLibrary = function() {
 		for (var i = 0; i <= array.length; i++) {
 			if (array[i] > givenNum) {
 				return array[i];
-			}
+			} 
 		}
 	}
 	
