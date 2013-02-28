@@ -57,6 +57,13 @@ var myLibrary = function() {
 		return number;
 	}
 
+	// FIND THE NUMBER OF HOURS OR DAYS BETWEEN TWO DATES
+	var dateDif = function(date1, date2) {
+		var aDay = 1000 * 60 * 60 * 24
+		var difference = ((date1.getTime() - date2.getTime()) / aDay);
+		return difference;
+	}
+
 	// CHECK NUMERIC FUNCTION
 	var checkNumeric = function(val) {
 		
@@ -106,7 +113,8 @@ var myLibrary = function() {
 		"sepReplace": sepReplace,
 		//"replSep": replSep,
 		"decimal": decimal,
-		"strNum": strNum
+		"strNum": strNum,
+		"dateDif": dateDif,
 	}
 
 
@@ -122,3 +130,4 @@ console.log("The new string is: " + newLib.sepReplace("Jeanine,Kevin,James,Kelly
 //console.log(newLib.replSep("jenanine,kevin,james,kelly", ",", " / "));
 console.log("This coffee cost $" + newLib.decimal(5.5));
 console.log("The number is: " + newLib.strNum("42"));
+console.log("The difference in days is: " + newLib.dateDif(new Date(2013, 06, 21, 0),new Date(2013, 02, 28,0)));
